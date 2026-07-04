@@ -10,6 +10,9 @@ RUN npm install
 COPY backend/src ./src
 COPY backend/tsconfig.json ./
 
+# Build TypeScript
+RUN npm run build
+
 # Set production environment
 ENV NODE_ENV=production
 ENV PORT=5000
